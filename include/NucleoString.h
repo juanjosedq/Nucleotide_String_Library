@@ -5,69 +5,52 @@
 #include <iostream>
 #include <fstream>
 
-#define ADN 0
+#define DNA 0
+#define RNA 1
+#define ADN 1
 #define ARN 1
 using namespace std;
 template<bool ANN>
-
+//! NucleoString Class.
+/*! This class implements a single DNA or RNA chain.
+*/
 class NucleoString{
     private:
+        /*! Store the chain as an string chain which only accepts the correct values.
+        * (AaCcTtGg for DNA chains and AaCcUuGg for RNA chains).
+        */
         string chain;
     public:
-        NucleoString(void){
-            this->chain = "";
-        }
-
-        NucleoString<ADN>(string entry){
-            string change = "AaCcTtGg";
-            size_t found = entry.find_not_of(change);
-                try{
-                    if(found == string::npos){
-                        this->chain = entry;
-                    }
-                    else{
-                        throw 1;
-                    }
-                }
-                catch(int e){
-                    cout<< "An exception ocurred. Exception Nr. "<< e <<".DNA chains only consist of A a C c T t G g \n";
-                }
-        }
-        NucleoString<ARN>(string entry){
-            string change = "AaCcUuGg";
-            size_t found = entry.find_not_of(change);
-                try{
-                    if(found == string::npos){
-                        this->chain = entry;
-                }
-                    else{
-                        throw 2;
-                    }
-                }
-                catch(int e){
-                    cout<< "An exception ocurred. Exception Nr. "<< e <<".RNA chains only consist of A a C c U u G g \n";
-                }
-        }
-
-        NucleoString(const NucleoString<ANN> & other){
-            this->chain = other.chain;
-        }
-
-        NucleoString<ADN>(NucleoString<ARN> other){
-            cout<< "Warning: You are converting a RNA to a DNA chain"<<endl;
-            NucleoString<ADN> temp = other.arncomplement();
-            this->chain = temp;
-        }
-
-        NucleoString<ARN>(NucleoString<ADN> other){
-            cout<< "Warning: You are converting a DNA to a RNA chain"<<endl;
-            NucleoString<ARN> temp = other.adncomplement();
-            this->chain = temp;
-        }
-
-        NucleoString& operator=(const NucleoString& other) { return *this; }
-        virtual ~NucleoString() {}
-    protected:
+        //! No param constructor.
+        /*!
+        / Sets chain as a string with no characters.
+        */
+        NucleoString(void);
+        //! string param constructor
+        /*!
+        * Sets the input string to the chain. Program will halt executing an exception if
+        * the strings values are not valid for the Nuclotid Chain (DNA or RNA).
+        */
+        NucleoString(string);
+        //! copy constructor
+        /*!
+        * Creates a equal Nucleotid String from a already existing one.
+        */
+        NucleoString(const NucleoString<ANN> &);
+        //! NucleoString<RNA> param constructor.
+        /*!
+        * Acts like a copy constructor if the type matches(Both of them are ARN chains). If not
+        * it will create a new DNA chain by finding the RNA's transcription.
+        * Warning: You may end up creating a DNA chain from a RNA chain if you're not careful enough.
+        */
+        NucleoString(NucleoString<RNA>);
+        //! NucleoString<DNA> param constructor.
+        /*!
+        * Acts like a copy constructor if the type matches(Both of them are DNA chains). If not
+        * it will create a new RNA chain by finding the DNA's transcription.
+        * Warning: You may end up creating a DNA chain from a RNA chain if you're not careful enough.
+        */
+        NucleoString(NucleoString<DNA>);
 };
 
 #endif // NUCLEOSTRING_H
