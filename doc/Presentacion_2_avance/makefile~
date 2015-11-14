@@ -1,0 +1,9 @@
+OBJS = Voronoi.tex
+TEX = pdflatex
+TARGET = Voronoip.pdf
+$(TARGET) : $(OBJS)
+	$(TEX) $(OBJS)
+look : $(TARGET)
+	okular $(TARGET) &
+clean:
+	rm -f *.log *.aux *.pdf *.nav *.out *.snm *.toc *.vrb *.gz *.fls *.fdb_latexmk
