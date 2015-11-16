@@ -7,7 +7,7 @@
 
 #define DNA 0
 #define RNA 1
-#define ADN 1
+#define ADN 0
 #define ARN 1
 using namespace std;
 template<bool ANN>
