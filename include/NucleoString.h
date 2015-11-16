@@ -9,8 +9,9 @@
 #define RNA 1
 #define ADN 0
 #define ARN 1
+typedef bool NTYPE;
 using namespace std;
-template<bool ANN>
+template<NTYPE ANN>
 //! NucleoString Class.
 /*! This class implements a single DNA or RNA chain.
 */
