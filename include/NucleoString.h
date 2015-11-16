@@ -51,6 +51,22 @@ class NucleoString{
         * Warning: You may end up creating a DNA chain from a RNA chain if you're not careful enough.
         */
         NucleoString(NucleoString<DNA>);
+        //! Return the Nucleotid String as an string of nucleobases for the current NucleoString
+        string chainret(void);//Falta Implementar
+        //! Return the character value of the i nucleobase of the string.
+        char operator[](void);//Falta Implementar.
+        //! Finds and creates a new NucleoString based on the complement of this NucleoString.
+        /*!
+        * This only creates the complement of the same type of NucleoString. If you want to create
+        * the complement in the transcription way (RNA -> DNA or DNA--> RNA) you should use the transcript function
+        */
+        NucleoString<ANN> complement(void);//falta implementar
+        //! Finds and creates a new NucleoString based on the transcript form of this NucleoString.
+        /*!
+        * This creates the complement of the diferent type of NucleoString. if you want to create
+        * the complement in the standard way (DNA-> DNA or RNA-> RNA) you should use the complement funciton
+        */
+        NucleoString<!ANN> transcript(void);//falta implementar.
 };
 
 #endif // NUCLEOSTRING_H
