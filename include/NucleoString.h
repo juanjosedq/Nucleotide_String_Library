@@ -90,6 +90,9 @@ class NucleoString{
         * the complement in the standard way (DNA-> DNA or RNA-> RNA) you should use the complement funciton
         */
         NucleoString<!ANN> transcript(void);//falta implementar.
+
+        //! Concatenates 2 NucleoStrings together and create a new NucleoString containing both.
+        NucleoString<ANN> operator+(NucleoString<ANN>);
 };
 
 #endif // NUCLEOSTRING_H
