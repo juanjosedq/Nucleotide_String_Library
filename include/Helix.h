@@ -57,7 +57,7 @@ class Helix{
         */
         Helix(NucleoString<DNA>,NucleoString<DNA>);
         /*! Fixes the current Helix by using one of the NucleoStrings<DNA> as a base.
-        * you may use the macros FIRST or SECOND to decide which one to use as a base.
+        * you may use the macros FIRST or SECOND to decide which one to fix. (It will use the other one as base)
         */
         void fix(WHICH);
         /*! Returns the required NucleoString<DNA> as a new NucleoString<DNA> object.
