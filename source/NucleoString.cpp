@@ -1,5 +1,5 @@
 #include "NucleoString.h"
-template<bool ANN>
+template<NTYPE ANN>
 NucleoString<ANN>::NucleoString(void){
     this->chain = "";
 }
@@ -33,7 +33,7 @@ NucleoString<ARN>::NucleoString(string entry){
         cout<< "An exception ocurred. Exception Nr. "<< e <<". RNA chains only consist of A a C c U u G g and blank spaces\n";
     }
 }
-template<bool ANN>
+template<NTYPE ANN>
 NucleoString<ANN>::NucleoString(const NucleoString<ANN> & other){
     this->chain = other.chain;
 }
@@ -48,4 +48,10 @@ NucleoString<ARN>::NucleoString(NucleoString<ARN> other){
     cout<<"% WARNING. You are converting a DNA chain into an RNA chain"<<endl;
     NucleoString<ARN> temp = other.adncomplement();
     this->chain = temp.chain;
+}
+template<NTYPE ANN>
+NucleoString<ANN> NucleoString<ANN>::operator+(NucleoString<ANN> other){
+    string temp = this->chain + other.chain;
+    NucleoString<ANN> retval = NucleoString<ANN>(temp);
+    return retval;
 }
