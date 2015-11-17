@@ -44,7 +44,7 @@ NucleoString<ADN>::NucleoString(NucleoString<ARN> other){
     this->chain = temp.chain;
 }
 template<>
-NucleoString<ARN>::NucleoString(NucleoString<ARN> other){
+NucleoString<ARN>::NucleoString(NucleoString<ADN> other){
     cout<<"% WARNING. You are converting a DNA chain into an RNA chain"<<endl;
     NucleoString<ARN> temp = other.transcript();
     this->chain = temp.chain;
