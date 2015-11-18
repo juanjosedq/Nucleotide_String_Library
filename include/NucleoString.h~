@@ -67,10 +67,7 @@ class NucleoString{
         * This creates the complement of the diferent type of NucleoString. if you want to create
         * the complement in the standard way (DNA-> DNA or RNA-> RNA) you should use the complement funciton
         */
-        NucleoString<!ANN> transcript(void);//Está listo, revisar por aquello.
-	
-	NucleoString<ANN>  cut(int n1, int n2);
+        NucleoString<!ANN> transcript(void);//falta implementar.
 };
-	
 
 #endif // NUCLEOSTRING_H
