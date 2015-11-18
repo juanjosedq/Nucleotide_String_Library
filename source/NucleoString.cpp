@@ -120,5 +120,7 @@ NucleoString<ANN> NucleoSting<ANN>::cut(int n1, int n2){
 	this->chain =temp;
 	}
 
+Nulceo::
+
 
 
