@@ -1,5 +1,5 @@
 #include "NucleoString.h"
-template<bool ANN>
+template<NTYPE ANN>
 NucleoString<ANN>::NucleoString(void){
     this->chain = "";
 }
@@ -33,7 +33,7 @@ NucleoString<ARN>::NucleoString(string entry){
         cout<< "An exception ocurred. Exception Nr. "<< e <<". RNA chains only consist of A a C c U u G g and blank spaces\n";
     }
 }
-template<bool ANN>
+template<NTYPE ANN>
 NucleoString<ANN>::NucleoString(const NucleoString<ANN> & other){
     this->chain = other.chain;
 }
@@ -44,11 +44,12 @@ NucleoString<ADN>::NucleoString(NucleoString<ARN> other){
     this->chain = temp.chain;
 }
 template<>
-NucleoString<ARN>::NucleoString(NucleoString<ARN> other){
+NucleoString<ARN>::NucleoString(NucleoString<ADN> other){
     cout<<"% WARNING. You are converting a DNA chain into an RNA chain"<<endl;
-    NucleoString<ARN> temp = other.adncomplement();
+    NucleoString<ARN> temp = other.transcript();
     this->chain = temp.chain;
 }
+<<<<<<< HEAD
 
 
 
@@ -120,5 +121,15 @@ NucleoString<ANN> NucleoSting<ANN>::cut(int n1, int n2){
 	this->chain =temp;
 	}
 
+Nulceo::
 
 
+
+=======
+template<NTYPE ANN>
+NucleoString<ANN> NucleoString<ANN>::operator+(NucleoString<ANN> other){
+    string temp = this->chain + other.chain;
+    NucleoString<ANN> retval = NucleoString<ANN>(temp);
+    return retval;
+}
+>>>>>>> 281edc0465c73c7b233a018798e4b9cd6c2b0ac5

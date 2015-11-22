@@ -1,3 +1,21 @@
+/*
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
+ *
+ */
+
 #ifndef NUCLEOSTRING_H
 #define NUCLEOSTRING_H
 
@@ -9,8 +27,12 @@
 #define RNA 1
 #define ADN 0
 #define ARN 1
-typedef bool NTYPE;
+
+typedef bool NTYPE;// Nuclotid Type
+typedef char NBASE; //NitroBase
+
 using namespace std;
+
 template<NTYPE ANN>
 //! NucleoString Class.
 /*! This class implements a single DNA or RNA chain.
@@ -40,7 +62,7 @@ class NucleoString{
         NucleoString(const NucleoString<ANN> &);
         //! NucleoString<RNA> param constructor.
         /*!
-        * Acts like a copy constructor if the type matches(Both of them are ARN chains). If not
+        * Acts like a copy constructor if the type matches(Both of them are RNA chains). If not
         * it will create a new DNA chain by finding the RNA's transcription.
         * Warning: You may end up creating a DNA chain from a RNA chain if you're not careful enough.
         */
@@ -55,7 +77,7 @@ class NucleoString{
         //! Return the Nucleotid String as an string of nucleobases for the current NucleoString
         string chainret(void);//Falta Implementar
         //! Return the character value of the i nucleobase of the string.
-        char operator[](void);//Falta Implementar.
+        NBASE operator[](void);//Falta Implementar.
         //! Finds and creates a new NucleoString based on the complement of this NucleoString.
         /*!
         * This only creates the complement of the same type of NucleoString. If you want to create
@@ -67,9 +89,16 @@ class NucleoString{
         * This creates the complement of the diferent type of NucleoString. if you want to create
         * the complement in the standard way (DNA-> DNA or RNA-> RNA) you should use the complement funciton
         */
+<<<<<<< HEAD
         NucleoString<!ANN> transcript(void);//Está listo, revisar por aquello.
 	
 	NucleoString<ANN>  cut(int n1, int n2);
+=======
+        NucleoString<!ANN> transcript(void);//falta implementar.
+
+        //! Concatenates 2 NucleoStrings together and create a new NucleoString containing both.
+        NucleoString<ANN> operator+(NucleoString<ANN>);
+>>>>>>> 281edc0465c73c7b233a018798e4b9cd6c2b0ac5
 };
 	
 
