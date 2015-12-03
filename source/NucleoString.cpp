@@ -59,61 +59,40 @@ NucleoString<ARN>::NucleoString(NucleoString<ADN> other){
 template<>
 NucleoString<ARN> NucleoString<ADN>::transcript(){
 	string temp = this->chain;
-	temp.find_first_of("Tt")
-	size_t found = temp.find_first_of("Tt");
-  	while (found!=string::npos)
-  	{
-    	str[found]='A';
-    	found=str.find_first_of("Tt",found+1);
-  	}
-	size_t found = temp.find_first_of("Aa");
-  	while (found!=string::npos)
-  	{
-    	str[found]='U';
-    	found=str.find_first_of("Aa",found+1);
-  	}
-	size_t found = temp.find_first_of("Cc");
-  	while (found!=string::npos)
-  	{
-    	str[found]='G';
-    	found=str.find_first_of("Cc",found+1);
-  	}
-	size_t found = temp.find_first_of("Gg");
-  	while (found!=string::npos)
-  	{
-    	str[found]='C';
-    	found=str.find_first_of("Gg",found+1);
-  	}
+	n = temp.length();
+	for(i=0; i<n; i++){
+	if(temp[i] == temp[temp[temp.find_first_of("Aa"))]{
+		temp[i] = 'U'
+	}
+	if-else(temp[i] == temp[temp[temp.find_first_of("Tt"))]{
+		temp[i] = 'A';
+	}
+	if-else(temp[i] == temp[temp[temp.find_first_of("Cc"))]{
+		temp[i] = 'G';
+	}
+	if-else(temp[i] == temp[temp[temp.find_first_of("Gg"))]{
+		temp[i] = 'C';
+	}
 }
 
 template<>
 NucleoString<ADN> NucleoString<ARN>::transcript(){
 	string temp = this->chain;
-	size_t found = temp.find_first_of("Uu");
-  	while (found!=string::npos)
-  	{
-    	str[found]='A';
-    	found=str.find_first_of("Uu",found+1);
-  	}
-	size_t found = temp.find_first_of("Aa");
-  	while (found!=string::npos)
-  	{
-    	str[found]='T';
-    	found=str.find_first_of("Aa",found+1);
-  	}
-	size_t found = temp.find_first_of("Cc");
-  	while (found!=string::npos)
-  	{
-    	str[found]='G';
-    	found=str.find_first_of("Cc",found+1);
-  	}
-	size_t found = temp.find_first_of("Gg");
-  	while (found!=string::npos)
-  	{
-    	str[found]='C';
-    	found=str.find_first_of("Gg",found+1);
-  	}
-}	
+	n = temp.length();
+	for(i=0; i<n; i++){
+	if(temp[i] == temp[temp[temp.find_first_of("Aa"))]{
+		temp[i] = 'T'
+	}
+	if-else(temp[i] == temp[temp[temp.find_first_of("Tt"))]{
+		temp[i] = 'A';
+	}
+	if-else(temp[i] == temp[temp[temp.find_first_of("Cc"))]{
+		temp[i] = 'G';
+	}
+	if-else(temp[i] == temp[temp[temp.find_first_of("Gg"))]{
+		temp[i] = 'C';
+	}
+}
 
 NucleoString<ANN> NucleoSting<ANN>::cut(int n1, int n2){
 	temp = this->chain;
