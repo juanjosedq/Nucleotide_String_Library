@@ -33,4 +33,11 @@ class Management{
         * Warning: You cannot create a management object, it doesn't exist.
         */
 	
-		FetchNucleotido()	
+		FetchNucleotido(NucleoString)
+        //! Representing a text file containing sequences in FASTA format.
+        /*!
+        * FASTA format is a text-based format for representing either nucleotide sequences or peptide sequences
+	* in which nucleotides or amino acids are represented using single-letter codes
+        */
+	
+#endif // Management_H	

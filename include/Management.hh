@@ -28,16 +28,18 @@ class Management{
 
 	public:
 		Management()
-        /*!
-        * This is the constructor of the class Management, it is empty because this is a class of functions .
-        * Warning: You cannot create a management object, it doesn't exist.
-        */
+		/*!
+		* This is the constructor of the class Management, it is empty because this is a class of functions .
+		* Warning: You cannot create a management object, it doesn't exist.
+		*/
 	
 		FetchNucleotido(NucleoString)
-        //! Representing a text file containing sequences in FASTA format.
-        /*!
-        * FASTA format is a text-based format for representing either nucleotide sequences or peptide sequences
-	* in which nucleotides or amino acids are represented using single-letter codes
-        */
+		//! Representing a text file containing sequences in FASTA format.
+		/*!
+		* FASTA format is a text-based format for representing either nucleotide sequences or peptide sequences
+		* in which nucleotides or amino acids are represented using single-letter codes
+		*/
 	
+		txt(string, NucleoString)
+
 #endif // Management_H	
