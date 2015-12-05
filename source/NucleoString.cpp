@@ -1,15 +1,18 @@
 #include "NucleoString.h"
 template<NTYPE ANN>
 NucleoString<ANN>::NucleoString(void){
+    this->header = "";
     this->chain = "";
 }
 template<>
 NucleoString<ADN>::NucleoString(string entry){
-    string change = "AaCcTtGg ";
-    size_t found =entry.find_first_not_of(change);
+    string change = "ACTG \n";
+    string header = substr(0,entry.find_first_of('\n'));
+    size_t found =  find_first_not_of(change);
     try{
         if(found == string::npos){
             this->chain = entry;
+            this->header = header;
         }
         else{
             throw 1;
@@ -20,7 +23,7 @@ NucleoString<ADN>::NucleoString(string entry){
 }
 template<>
 NucleoString<ARN>::NucleoString(string entry){
-    string change = "AaCcUuGg ";
+    string change = "ACUG \n";
     size_t found = entry.find_first_not_of(change);
     try{
         if(found == string::npos){
@@ -35,24 +38,27 @@ NucleoString<ARN>::NucleoString(string entry){
 }
 template<NTYPE ANN>
 NucleoString<ANN>::NucleoString(const NucleoString<ANN> & other){
+    this->header = other.header;
     this->chain = other.chain;
 }
 template<>
 NucleoString<ADN>::NucleoString(NucleoString<ARN> other){
     cout<<"% WARNING. You are converting a RNA chain into DNA chain"<<endl;
-    NucleoString<ADN> temp = other.arncomplement(); // Falta que ariel me pase esta función.
+    NucleoString<ADN> temp = other.transcript(); // Falta que ariel me pase esta función.
     this->chain = temp.chain;
+    this->header = other.header;
 }
 template<>
 NucleoString<ARN>::NucleoString(NucleoString<ADN> other){
     cout<<"% WARNING. You are converting a DNA chain into an RNA chain"<<endl;
     NucleoString<ARN> temp = other.transcript();
     this->chain = temp.chain;
+    this->header = other.header;
 }
-
-
-
-
+template<NTYPE ANN>
+string NucleoString<>::getfasta(){
+    return this->header + this->chain;
+}
 
 //! Funciones Ariel-man Revisar por aquello
 
@@ -93,7 +99,7 @@ NucleoString<ADN> NucleoString<ARN>::transcript(){
 		temp[i] = 'C';
 	}
 }
-
+template<NTYPE ANN>
 NucleoString<ANN> NucleoSting<ANN>::cut(int n1, int n2){
 	temp = this->chain;
 	temp.erase(n1, n2);
@@ -104,6 +110,7 @@ template<NTYPE ANN>
 NucleoString<ANN> NucleoString<ANN>::operator+(NucleoString<ANN> other){
     string temp = this->chain + other.chain;
     NucleoString<ANN> retval = NucleoString<ANN>(temp);
+    this->header = "";
     return retval;
 }
 

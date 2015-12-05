@@ -39,6 +39,9 @@ template<NTYPE ANN>
 */
 class NucleoString{
     private:
+        /*! Store de header form a FASTA file, so you can access the files as a fasta
+        */
+        string header;
         /*! Store the chain as an string chain which only accepts the correct values.
         * (AaCcTtGg for DNA chains and AaCcUuGg for RNA chains).
         */
@@ -89,17 +92,16 @@ class NucleoString{
         * This creates the complement of the diferent type of NucleoString. if you want to create
         * the complement in the standard way (DNA-> DNA or RNA-> RNA) you should use the complement funciton
         */
-<<<<<<< HEAD
+
         NucleoString<!ANN> transcript(void);//Está listo, revisar por aquello.
-	
-	NucleoString<ANN>  cut(int n1, int n2);
-=======
-        NucleoString<!ANN> transcript(void);//falta implementar.
+        //! Returns the value of the FASTA format Nucleotid String
+        string NucleoString<ANN> getfasta(void);
+
+        NucleoString<ANN>  cut(int n1, int n2);
 
         //! Concatenates 2 NucleoStrings together and create a new NucleoString containing both.
         NucleoString<ANN> operator+(NucleoString<ANN>);
->>>>>>> 281edc0465c73c7b233a018798e4b9cd6c2b0ac5
 };
-	
+
 
 #endif // NUCLEOSTRING_H
