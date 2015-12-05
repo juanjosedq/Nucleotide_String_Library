@@ -113,4 +113,11 @@ NucleoString<ANN> NucleoString<ANN>::operator+(NucleoString<ANN> other){
     this->header = "";
     return retval;
 }
-
+template<NTYPE ANN>
+string NucleoString<ANN>::chainret(){
+    return this->chain;
+}
+template<NTYPE ANN>
+string NucleoSting<ANN>::headerret(){
+    return this->header;
+}

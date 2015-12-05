@@ -96,6 +96,8 @@ class NucleoString{
         NucleoString<!ANN> transcript(void);//Está listo, revisar por aquello.
         //! Returns the value of the FASTA format Nucleotid String
         string NucleoString<ANN> getfasta(void);
+        //! Returns the header of the equivalent FASTA format String
+        NucleoString<ANN> headerret(void);
 
         NucleoString<ANN>  cut(int n1, int n2);
 
