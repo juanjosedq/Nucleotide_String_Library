@@ -19,4 +19,11 @@ management:txt(string titulo, NucleoString){
 	fs << NucleoString << endl; 
 }
 
+management:loadString(string file){
+	ifstream fe(file".text");
+	fe.getline(fe,line);
+	string nucleotide = fe.getline(fe,line);
+	return nucleotide;
+}
+
 http://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/lxr/ident?i=Blast_QueryIsNucleotide  //definicion de Blast_QueryIsNucleotide

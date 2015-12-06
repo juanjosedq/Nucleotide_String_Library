@@ -41,5 +41,12 @@ class Management{
 		*/
 	
 		txt(string, NucleoString)
+		/*! 
+		*This function generates a text from a NucleoString. with a title in the first line and then the 
+		*/
+		loadString(string file)
+		/*!
+		This function generates a string from a textfile. Warning: This function doesn't read the first line cause it might be the title
+		*/
 
 #endif // Management_H	
