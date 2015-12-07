@@ -21,8 +21,14 @@
 
 #include "NucleoString.h"
 #include "NucleoString.cpp"
-#include "algo/blast/blastinput/blast_fasta_input.hpp"
-#include "algo/blast/blastinput/blast_input.hpp"
+
+#include <algo/blast/api/blast_types.hpp>
+#include <objmgr/object_manager.hpp>
+#include <algo/blast/api/objmgr_query_data.hpp>
+#include <algo/blast/api/blast_options_handle.hpp>
+#include <algo/blast/api/blast_nucl_options.hpp>
+#include <algo/blast/blastinput/blast_fasta_input.hpp>
+#include <algo/blast/blastinput/blast_input.hpp>
 
 class Management{
 
@@ -33,14 +39,38 @@ class Management{
 		* Warning: You cannot create a management object, it doesn't exist.
 		*/
 		Management()
-
-		//! Representing a text file containing sequences in FASTA format.
+		//! NucleoString param constructor.
 		/*!
-		* FASTA format is a text-based format for representing either nucleotide sequences or peptide sequences
-		* in which nucleotides or amino acids are represented using single-letter codes
+		* Generates a vector of sequence locations "TSeqLocVector". FASTA format is a text-based format
+		* for representing either nucleotide sequences or peptide sequences in which nucleotides or
+		* amino acids are represented using single-letter codes
 		*/	
-		FetchNucleotido(NucleoString)
-	
+		FetchQuerySequence(NucleoString<>)
+		//! Null param constructor.
+		/*!
+		* Select the options of target sequences "Data bases"
+		* Warning: This function only is for BlastN data bases.
+		*/
+		FetchNucleoNDataBases()
+		//! Null param constructor.
+		/*!
+		* Select the options of target sequences "Data bases"
+		* Warning: This function only is for MegaBlast data bases.
+		*/
+		FetchNucleoMegaDataBases()
+		//! Null param constructor.
+		/*!
+		* Set the options to values appropriate to common tasks
+		* Warning: This function only is for BlastN data bases.
+		*/
+		FetchOptionsBlastN()
+		//! Null param constructor.
+		/*!
+		* Set the options to values appropriate to common tasks
+		* Warning: This function only is for MegaBlast data bases.
+		*/
+		FetchOptionsMegaBlast()
+
 		txt(string, NucleoString)
 
 #endif // Management_H	
