@@ -93,16 +93,26 @@ class NucleoString{
         * the complement in the standard way (DNA-> DNA or RNA-> RNA) you should use the complement funciton
         */
 
-        NucleoString<!ANN> transcript(void);//Está listo, revisar por aquello.
+        NucleoString<!ANN> transcript(void);
+	//! Transcripts a sequences of nucleotides into a RNA if it is a DNA or DNA if it is a ARN.
+	
+
+
         //! Returns the value of the FASTA format Nucleotid String
         string NucleoString<ANN> getfasta(void);
         //! Returns the header of the equivalent FASTA format String
         NucleoString<ANN> headerret(void);
 
+	//!Cut a NucleoString from the point a to the point b
         NucleoString<ANN>  cut(int n1, int n2);
+	
 
         //! Concatenates 2 NucleoStrings together and create a new NucleoString containing both.
         NucleoString<ANN> operator+(NucleoString<ANN>);
+
+	//! Compare how similar are two nucleotide sequences one from other. It returns the percentage of similitude
+	int compare(NucleoString nucleo1,NucleoString nucleo2);
+
 };
 
 

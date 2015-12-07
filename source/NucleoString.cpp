@@ -118,6 +118,14 @@ string NucleoString<ANN>::chainret(){
     return this->chain;
 }
 template<NTYPE ANN>
-string NucleoSting<ANN>::headerret(){
+string NucleoString<ANN>::headerret(){
     return this->header;
+}
+
+template<NTYPE ANN>
+int NucleoString<ANN>::compare(String nucleo1, String nucleo2){
+	n1=nucleo1.size();
+	n2=nucleo2.size();
+	nucleo1find(nucleo2);
+			
 }
