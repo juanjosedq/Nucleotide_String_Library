@@ -103,10 +103,16 @@ class NucleoString{
         //! Returns the header of the equivalent FASTA format String
         NucleoString<ANN> headerret(void);
 
+	//!Cut a NucleoString from the point a to the point b
         NucleoString<ANN>  cut(int n1, int n2);
+	
 
         //! Concatenates 2 NucleoStrings together and create a new NucleoString containing both.
         NucleoString<ANN> operator+(NucleoString<ANN>);
+
+	//! Compare how similar are two nucleotide sequences one from other. It returns the percentage of similitude
+	int compare(NucleoString nucleo1,NucleoString nucleo2);
+
 };
 
 
