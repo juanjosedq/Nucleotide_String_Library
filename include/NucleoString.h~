@@ -86,7 +86,7 @@ class NucleoString{
         * This only creates the complement of the same type of NucleoString. If you want to create
         * the complement in the transcription way (RNA -> DNA or DNA--> RNA) you should use the transcript function
         */
-        NucleoString<ANN> complement(void);//falta implementar
+        NucleoString<ANN> complement(void);
         //! Finds and creates a new NucleoString based on the transcript form of this NucleoString.
         /*!
         * This creates the complement of the diferent type of NucleoString. if you want to create
