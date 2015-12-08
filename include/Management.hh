@@ -30,6 +30,10 @@
 #include <algo/blast/blastinput/blast_fasta_input.hpp>
 #include <algo/blast/blastinput/blast_input.hpp>
 
+//! Managemet Class
+/*! This class manages the access to the servers, aswell as the 
+* read and write from the different file formats.
+*/
 class Management{
 
 	public:
@@ -38,14 +42,14 @@ class Management{
 		/*!
 		* Warning: You cannot create a management object, it doesn't exist.
 		*/
-		Management()
+		Management();
 		//! NucleoString param constructor.
 		/*!
 		* Generates a vector of sequence locations "TSeqLocVector". FASTA format is a text-based format
 		* for representing either nucleotide sequences or peptide sequences in which nucleotides or
 		* amino acids are represented using single-letter codes
 		*/	
-		FetchQuerySequence(NucleoString<>)
+		FetchQuerySequence(NucleoString<ADN>);
 		//! Null param constructor.
 		/*!
 		* Select the options of target sequences "Data bases"
@@ -70,14 +74,14 @@ class Management{
 		* Warning: This function only is for MegaBlast data bases.
 		*/
 		FetchOptionsMegaBlast()
-
-		txt(string, NucleoString)
 		/*! 
 		*This function generates a text from a NucleoString. with a title in the first line and then the 
 		*/
-		loadString(string file)
+		txt(string, NucleoString)
 		/*!
 		This function generates a string from a textfile. Warning: This function doesn't read the first line cause it might be the title
 		*/
+		loadString(string file)
+
 
 #endif // Management_H	
