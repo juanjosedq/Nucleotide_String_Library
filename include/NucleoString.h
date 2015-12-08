@@ -92,10 +92,8 @@ class NucleoString{
         * This creates the complement of the diferent type of NucleoString. if you want to create
         * the complement in the standard way (DNA-> DNA or RNA-> RNA) you should use the complement funciton
         */
-
 	//! Transcripts a sequences of nucleotides into a RNA if it is a DNA or DNA if it is a ARN.
         NucleoString<!ANN> transcript(void);
-
 
         //! Returns the value of the FASTA format Nucleotid String
         string NucleoString<ANN> getfasta(void);
@@ -104,7 +102,6 @@ class NucleoString{
 
 	//!Cut a NucleoString from the point a to the point b
         NucleoString<ANN>  cut(int, int);
-	
 
         //! Concatenates 2 NucleoStrings together and create a new NucleoString containing both.
         NucleoString<ANN> operator+(NucleoString<ANN>);

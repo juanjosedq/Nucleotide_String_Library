@@ -78,7 +78,7 @@ class NucleoString{
         */
         NucleoString(NucleoString<DNA>);
         //! Return the Nucleotid String as an string of nucleobases for the current NucleoString
-        string chainret(void);//Falta Implementar
+        string chainret(void);
         //! Return the character value of the i nucleobase of the string.
         NBASE operator[](void);//Falta Implementar.
         //! Finds and creates a new NucleoString based on the complement of this NucleoString.
