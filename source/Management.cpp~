@@ -34,17 +34,17 @@ CRef<IQueryFactory> Management::FetchQuerySequence(NucleoString<ADN> Nucleotxt){
 	// la idea de que esta funcion este aqui tambies es para que se genere el argumento sin tener que llamar a funciones de blast 	
 	// innecesarias en el main
 
-	return query_factory;
+	return query_loc;
 }
 
-CSearchDatabase Management::FetchBlastNDataBases(){
+CSearchDatabase Management::FetchNucleoNDataBases(){
 	// El primero argumento es el nombre de la base de datos.	
 	// El segundo argumento es un EMoleculeType que representa el tipo de molecula, en este caso nucleotidos.
 	const CSearchDatabase target_db(eBlastN, eBlastDbIsNucleotide); 
 	return target_db;
 }
 
-CSearchDatabase Management::FetchMegaBlastDataBases(){
+CSearchDatabase Management::FetchNucleoMegaDataBases(){
 	// El primero argumento es el nombre de la base de datos.	
 	// El segundo argumento es un EMoleculeType que representa el tipo de molecula, en este caso nucleotidos.
 	const CSearchDatabase target_db(eMegablast, eBlastDbIsNucleotide); 
