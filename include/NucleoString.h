@@ -93,9 +93,8 @@ class NucleoString{
         * the complement in the standard way (DNA-> DNA or RNA-> RNA) you should use the complement funciton
         */
 
-        NucleoString<!ANN> transcript(void);
 	//! Transcripts a sequences of nucleotides into a RNA if it is a DNA or DNA if it is a ARN.
-	
+        NucleoString<!ANN> transcript(void);
 
 
         //! Returns the value of the FASTA format Nucleotid String
