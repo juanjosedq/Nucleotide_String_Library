@@ -35,11 +35,11 @@ class Management{
 		/*! 
 		*This function generates a text from a NucleoString. with a title in the first line and then the 
 		*/
-		void txt(string, NucleoString)
+		void txt(string, NucleoString);
 		/*!
 		This function generates a string from a textfile. Warning: This function doesn't read the first line cause it might be the title
 		*/
-		String loadString(string file)
+		String loadString(string);
 
 
 #endif // Management_H	
