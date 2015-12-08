@@ -51,25 +51,25 @@ class Management{
 		* Select the options of target sequences "Data bases"
 		* Warning: This function only is for BlastN data bases.
 		*/
-		CSearchDatabase FetchBlastNDataBases();
+		CSearchDatabase FetchBlastNDataBases(void);
 		//! Null param constructor.
 		/*!
 		* Select the options of target sequences "Data bases"
 		* Warning: This function only is for MegaBlast data bases.
 		*/
-		CSearchDatabase FetchMegaBlastDataBases();
+		CSearchDatabase FetchMegaBlastDataBases(void);
 		//! Null param constructor.
 		/*!
 		* Set the options to values appropriate to common tasks
 		* Warning: This function only is for BlastN data bases.
 		*/
-		CRef<CBlastOptionsHandle> FetchOptionsBlastN();
+		CRef<CBlastOptionsHandle> FetchOptionsBlastN(void);
 		//! Null param constructor.
 		/*!
 		* Set the options to values appropriate to common tasks
 		* Warning: This function only is for MegaBlast data bases.
 		*/
-		CRef<CBlastOptionsHandle> FetchOptionsMegaBlast();
+		CRef<CBlastOptionsHandle> FetchOptionsMegaBlast(void);
 		/*! 
 		*This function generates a text from a NucleoString. with a title in the first line and then the 
 		*/

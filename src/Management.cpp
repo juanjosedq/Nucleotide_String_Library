@@ -6,8 +6,6 @@ Management::Management(void){
 
 CRef<IQueryFactory> Management::FetchQuerySequence(NucleoString<ADN> Nucleotxt){
 
-	// Verificar que realmente deba entrar un nucleo String o usar la funcion get.fasta o usar el constructor de CBlastFastaInputSource
-	// que recibe un txt para no complicarse la vida
 	String user_input = Nucleotxt.getfasta();
 
 	// El primer parámetro es un bool que indica que solo se leeran proteinas por lo cual irá falso, segundo argumento son las opciones
@@ -36,26 +34,26 @@ CRef<IQueryFactory> Management::FetchQuerySequence(NucleoString<ADN> Nucleotxt){
 	return query_factory;
 }
 
-CSearchDatabase Management::FetchBlastNDataBases(){
+CSearchDatabase Management::FetchBlastNDataBases(void){
 	// El primero argumento es el nombre de la base de datos.	
 	// El segundo argumento es un EMoleculeType que representa el tipo de molecula, en este caso nucleotidos.
 	const CSearchDatabase target_db(eBlastN, eBlastDbIsNucleotide); 
 	return target_db;
 }
 
-CSearchDatabase Management::FetchMegaBlastDataBases(){
+CSearchDatabase Management::FetchMegaBlastDataBases(void){
 	// El primero argumento es el nombre de la base de datos.	
 	// El segundo argumento es un EMoleculeType que representa el tipo de molecula, en este caso nucleotidos.
 	const CSearchDatabase target_db(eMegablast, eBlastDbIsNucleotide); 
 	return target_db;
 }
 
-CRef<CBlastOptionsHandle> Management::FetchOptionsBlastN(){
+CRef<CBlastOptionsHandle> Management::FetchOptionsBlastN(void){
 	CRef<CBlastOptionsHandle> opts(CBlastOptionsFactory::Create(eBlastN));
 	return opts;
 }
 
-CRef<CBlastOptionsHandle> Management::FetchOptionsMegaBlast(){
+CRef<CBlastOptionsHandle> Management::FetchOptionsMegaBlast(void){
 	CRef<CBlastOptionsHandle> opts(CBlastOptionsFactory::Create(eMegablast));
 	return opts;
 }
