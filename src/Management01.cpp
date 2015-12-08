@@ -12,7 +12,7 @@ void management:txt(string titulo, NucleoString){
 }
 
 
-management:loadString(string file){
+String management:loadString(string file){
 	ifstream fe(file".text");
 	fe.getline(fe,line);
 	string nucleotide = fe.getline(fe,line);
