@@ -67,7 +67,7 @@ void management:txt(string titulo, NucleoString){
 }
 
 
-string management:loadString(string file){
+management:loadString(string file){
 	ifstream fe(file".text");
 	fe.getline(fe,line);
 	string nucleotide = fe.getline(fe,line);
