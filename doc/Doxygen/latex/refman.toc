@@ -1,0 +1,25 @@
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Class List}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Class Documentation}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Helix Class Reference}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Constructor \& Destructor Documentation}{3}{subsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.1}Helix}{3}{subsubsection.2.1.1.1}
+\contentsline {subsubsection}{\numberline {2.1.1.2}Helix}{3}{subsubsection.2.1.1.2}
+\contentsline {subsubsection}{\numberline {2.1.1.3}Helix}{3}{subsubsection.2.1.1.3}
+\contentsline {subsubsection}{\numberline {2.1.1.4}Helix}{4}{subsubsection.2.1.1.4}
+\contentsline {subsection}{\numberline {2.1.2}Member Function Documentation}{4}{subsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.2.1}fix}{4}{subsubsection.2.1.2.1}
+\contentsline {subsubsection}{\numberline {2.1.2.2}get\discretionary {-}{}{}Nucleo\discretionary {-}{}{}String}{4}{subsubsection.2.1.2.2}
+\contentsline {section}{\numberline {2.2}Nucleo\discretionary {-}{}{}String$<$ A\discretionary {-}{}{}N\discretionary {-}{}{}N $>$ Class Template Reference}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Detailed Description}{5}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Constructor \& Destructor Documentation}{5}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Nucleo\discretionary {-}{}{}String}{5}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.2}Nucleo\discretionary {-}{}{}String}{5}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.3}Nucleo\discretionary {-}{}{}String}{5}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.2.4}Nucleo\discretionary {-}{}{}String}{5}{subsubsection.2.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.2.5}Nucleo\discretionary {-}{}{}String}{6}{subsubsection.2.2.2.5}
+\contentsline {subsection}{\numberline {2.2.3}Member Function Documentation}{6}{subsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3.1}complement}{6}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.2}getfasta}{6}{subsubsection.2.2.3.2}
+\contentsline {subsubsection}{\numberline {2.2.3.3}transcript}{6}{subsubsection.2.2.3.3}
+\contentsline {chapter}{Index}{7}{section*.5}

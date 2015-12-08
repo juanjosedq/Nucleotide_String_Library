@@ -1,0 +1,89 @@
+\hypertarget{class_helix}{\section{Helix Class Reference}
+\label{class_helix}\index{Helix@{Helix}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_helix_a38c5184accbcfa70d7f2e9651b36816e}{Helix} (void)
+\begin{DoxyCompactList}\small\item\em No param constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_helix_a232f6908372b90cc08c34c8173bc7c18}{Helix} (string)
+\begin{DoxyCompactList}\small\item\em string param constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_helix_a5f8fcd37b8c001a49c3ebe23e2e755ec}{Helix} (\hyperlink{class_nucleo_string}{Nucleo\-String}$<$ D\-N\-A $>$)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_nucleo_string}{Nucleo\-String$<$\-D\-N\-A$>$} param constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_helix_a591c05c017211f1ee28354a46fbcd66e}{Helix} (\hyperlink{class_nucleo_string}{Nucleo\-String}$<$ D\-N\-A $>$, \hyperlink{class_nucleo_string}{Nucleo\-String}$<$ D\-N\-A $>$)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_nucleo_string}{Nucleo\-String$<$\-D\-N\-A$>$} dual param constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_helix_aba7c805116712315f804915dfecd6330}{fix} (W\-H\-I\-C\-H)
+\item 
+\hyperlink{class_nucleo_string}{Nucleo\-String}$<$ D\-N\-A $>$ \hyperlink{class_helix_ae4e28a7d1dbb66eb0abf4817cdba9fd8}{get\-Nucleo\-String} (W\-H\-I\-C\-H)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_helix_a38c5184accbcfa70d7f2e9651b36816e}{\index{Helix@{Helix}!Helix@{Helix}}
+\index{Helix@{Helix}!Helix@{Helix}}
+\subsubsection[{Helix}]{\setlength{\rightskip}{0pt plus 5cm}Helix\-::\-Helix (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_helix_a38c5184accbcfa70d7f2e9651b36816e}
+
+
+No param constructor. 
+
+Creates 2 new \hyperlink{class_nucleo_string}{Nucleo\-String$<$\-D\-N\-A$>$} objects, with no input string. \hypertarget{class_helix_a232f6908372b90cc08c34c8173bc7c18}{\index{Helix@{Helix}!Helix@{Helix}}
+\index{Helix@{Helix}!Helix@{Helix}}
+\subsubsection[{Helix}]{\setlength{\rightskip}{0pt plus 5cm}Helix\-::\-Helix (
+\begin{DoxyParamCaption}
+\item[{string}]{entry}
+\end{DoxyParamCaption}
+)}}\label{class_helix_a232f6908372b90cc08c34c8173bc7c18}
+
+
+string param constructor. 
+
+Creates a new \hyperlink{class_nucleo_string}{Nucleo\-String$<$\-D\-N\-A$>$} from a D\-N\-A character string. It then creates its complement, by using the funcition and stores both in a Helxi object. \hypertarget{class_helix_a5f8fcd37b8c001a49c3ebe23e2e755ec}{\index{Helix@{Helix}!Helix@{Helix}}
+\index{Helix@{Helix}!Helix@{Helix}}
+\subsubsection[{Helix}]{\setlength{\rightskip}{0pt plus 5cm}Helix\-::\-Helix (
+\begin{DoxyParamCaption}
+\item[{{\bf Nucleo\-String}$<$ D\-N\-A $>$}]{entry}
+\end{DoxyParamCaption}
+)}}\label{class_helix_a5f8fcd37b8c001a49c3ebe23e2e755ec}
+
+
+\hyperlink{class_nucleo_string}{Nucleo\-String$<$\-D\-N\-A$>$} param constructor. 
+
+Creates a new \hyperlink{class_nucleo_string}{Nucleo\-String$<$\-D\-N\-A$>$} by getting the complement using the \hyperlink{class_nucleo_string_ad89515d3ea45e52d7d462a86a819ce2f}{Nucleo\-String$<$\-D\-N\-A$>$\-::complement()} function and stores both in a \hyperlink{class_helix}{Helix} object. \hypertarget{class_helix_a591c05c017211f1ee28354a46fbcd66e}{\index{Helix@{Helix}!Helix@{Helix}}
+\index{Helix@{Helix}!Helix@{Helix}}
+\subsubsection[{Helix}]{\setlength{\rightskip}{0pt plus 5cm}Helix\-::\-Helix (
+\begin{DoxyParamCaption}
+\item[{{\bf Nucleo\-String}$<$ D\-N\-A $>$}]{, }
+\item[{{\bf Nucleo\-String}$<$ D\-N\-A $>$}]{}
+\end{DoxyParamCaption}
+)}}\label{class_helix_a591c05c017211f1ee28354a46fbcd66e}
+
+
+\hyperlink{class_nucleo_string}{Nucleo\-String$<$\-D\-N\-A$>$} dual param constructor. 
+
+Creates a \hyperlink{class_helix}{Helix} object by setting both of the \hyperlink{class_nucleo_string}{Nucleo\-String$<$\-D\-N\-A$>$} chains. Warning\-: You may end up creating a invalid \hyperlink{class_helix}{Helix} as this constructor won't check if they are compatible chains. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_helix_aba7c805116712315f804915dfecd6330}{\index{Helix@{Helix}!fix@{fix}}
+\index{fix@{fix}!Helix@{Helix}}
+\subsubsection[{fix}]{\setlength{\rightskip}{0pt plus 5cm}void Helix\-::fix (
+\begin{DoxyParamCaption}
+\item[{W\-H\-I\-C\-H}]{}
+\end{DoxyParamCaption}
+)}}\label{class_helix_aba7c805116712315f804915dfecd6330}
+Fixes the current \hyperlink{class_helix}{Helix} by using one of the Nucleo\-Strings$<$\-D\-N\-A$>$ as a base. you may use the macros F\-I\-R\-S\-T or S\-E\-C\-O\-N\-D to decide which one to fix. (It will use the other one as base) \hypertarget{class_helix_ae4e28a7d1dbb66eb0abf4817cdba9fd8}{\index{Helix@{Helix}!get\-Nucleo\-String@{get\-Nucleo\-String}}
+\index{get\-Nucleo\-String@{get\-Nucleo\-String}!Helix@{Helix}}
+\subsubsection[{get\-Nucleo\-String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Nucleo\-String}$<$D\-N\-A$>$ Helix\-::get\-Nucleo\-String (
+\begin{DoxyParamCaption}
+\item[{W\-H\-I\-C\-H}]{}
+\end{DoxyParamCaption}
+)}}\label{class_helix_ae4e28a7d1dbb66eb0abf4817cdba9fd8}
+Returns the required \hyperlink{class_nucleo_string}{Nucleo\-String$<$\-D\-N\-A$>$} as a new \hyperlink{class_nucleo_string}{Nucleo\-String$<$\-D\-N\-A$>$} object. you may use the macros F\-I\-R\-S\-T or S\-E\-C\-O\-N\-D to decide which on you want to return. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/david/\-Documents/\-Estructuras/\-Nucleolib/juanjo/\-Nucleotide\-\_\-\-String\-\_\-\-Library/include/Helix.\-h\item 
+/home/david/\-Documents/\-Estructuras/\-Nucleolib/juanjo/\-Nucleotide\-\_\-\-String\-\_\-\-Library/source/Helix.\-cpp\end{DoxyCompactItemize}

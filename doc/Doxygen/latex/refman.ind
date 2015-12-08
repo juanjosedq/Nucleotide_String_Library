@@ -1,0 +1,42 @@
+\begin{theindex}
+
+  \item {complement}
+    \subitem {Nucleo\discretionary {-}{}{}String}, \hyperpage{6}
+
+  \indexspace
+
+  \item {fix}
+    \subitem {Helix}, \hyperpage{4}
+
+  \indexspace
+
+  \item {get\discretionary {-}{}{}Nucleo\discretionary {-}{}{}String}
+    \subitem {Helix}, \hyperpage{4}
+  \item {getfasta}
+    \subitem {Nucleo\discretionary {-}{}{}String}, \hyperpage{6}
+
+  \indexspace
+
+  \item {Helix}, \hyperpage{3}
+    \subitem {fix}, \hyperpage{4}
+    \subitem {get\discretionary {-}{}{}Nucleo\discretionary {-}{}{}String}, 
+		\hyperpage{4}
+    \subitem {Helix}, \hyperpage{3}
+
+  \indexspace
+
+  \item {Nucleo\discretionary {-}{}{}String}
+    \subitem {complement}, \hyperpage{6}
+    \subitem {getfasta}, \hyperpage{6}
+    \subitem {Nucleo\discretionary {-}{}{}String}, \hyperpage{5}
+    \subitem {Nucleo\discretionary {-}{}{}String}, \hyperpage{5}
+    \subitem {transcript}, \hyperpage{6}
+  \item {Nucleo\discretionary {-}{}{}String$<$ A\discretionary {-}{}{}N\discretionary {-}{}{}N $>$}, 
+		\hyperpage{4}
+
+  \indexspace
+
+  \item {transcript}
+    \subitem {Nucleo\discretionary {-}{}{}String}, \hyperpage{6}
+
+\end{theindex}
