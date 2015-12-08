@@ -38,38 +38,38 @@ class Management{
 		/*!
 		* Warning: You cannot create a management object, it doesn't exist.
 		*/
-		Management(void);
+		Management(void)
 		//! NucleoString param constructor.
 		/*!
 		* Generates a vector of sequence locations "TSeqLocVector". FASTA format is a text-based format
 		* for representing either nucleotide sequences or peptide sequences in which nucleotides or
 		* amino acids are represented using single-letter codes
 		*/	
-		CRef<IQueryFactory> FetchQuerySequence(NucleoString<ARN>);
+		FetchQuerySequence(NucleoString<ARN>)
 		//! Null param constructor.
 		/*!
 		* Select the options of target sequences "Data bases"
 		* Warning: This function only is for BlastN data bases.
 		*/
-		CSearchDatabase FetchBlastNDataBases();
+		FetchBlastNDataBases()
 		//! Null param constructor.
 		/*!
 		* Select the options of target sequences "Data bases"
 		* Warning: This function only is for MegaBlast data bases.
 		*/
-		CSearchDatabase FetchMegaBlastDataBases();
+		FetchMegaBlastDataBases()
 		//! Null param constructor.
 		/*!
 		* Set the options to values appropriate to common tasks
 		* Warning: This function only is for BlastN data bases.
 		*/
-		CRef<CBlastOptionsHandle> FetchOptionsBlastN();
+		FetchOptionsBlastN()
 		//! Null param constructor.
 		/*!
 		* Set the options to values appropriate to common tasks
 		* Warning: This function only is for MegaBlast data bases.
 		*/
-		CRef<CBlastOptionsHandle> FetchOptionsMegaBlast();
+		FetchOptionsMegaBlast()
 
 		txt(string, NucleoString)
 		/*! 
