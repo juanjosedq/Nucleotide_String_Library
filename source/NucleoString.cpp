@@ -70,13 +70,13 @@ NucleoString<ARN> NucleoString<ADN>::transcript(){
 	if(temp[i] == temp[temp[temp.find_first_of("Aa"))]{
 		temp[i] = 'U'
 	}
-	if-else(temp[i] == temp[temp[temp.find_first_of("Tt"))]{
+	else-if(temp[i] == temp[temp[temp.find_first_of("Tt"))]{
 		temp[i] = 'A';
 	}
-	if-else(temp[i] == temp[temp[temp.find_first_of("Cc"))]{
+	else-if(temp[i] == temp[temp[temp.find_first_of("Cc"))]{
 		temp[i] = 'G';
 	}
-	if-else(temp[i] == temp[temp[temp.find_first_of("Gg"))]{
+	else-if(temp[i] == temp[temp[temp.find_first_of("Gg"))]{
 		temp[i] = 'C';
 	}
 }
@@ -89,13 +89,13 @@ NucleoString<ADN> NucleoString<ARN>::transcript(){
 	if(temp[i] == temp[temp[temp.find_first_of("Aa"))]{
 		temp[i] = 'T'
 	}
-	if-else(temp[i] == temp[temp[temp.find_first_of("Tt"))]{
+	else if(temp[i] == temp[temp[temp.find_first_of("Tt"))]{
 		temp[i] = 'A';
 	}
-	if-else(temp[i] == temp[temp[temp.find_first_of("Cc"))]{
+	else if(temp[i] == temp[temp[temp.find_first_of("Cc"))]{
 		temp[i] = 'G';
 	}
-	if-else(temp[i] == temp[temp[temp.find_first_of("Gg"))]{
+	else if(temp[i] == temp[temp[temp.find_first_of("Gg"))]{
 		temp[i] = 'C';
 	}
 }
