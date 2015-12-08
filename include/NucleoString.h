@@ -110,7 +110,7 @@ class NucleoString{
         //! Concatenates 2 NucleoStrings together and create a new NucleoString containing both.
         NucleoString<ANN> operator+(NucleoString<ANN>);
 
-	//! Compare how similar are two nucleotide sequences one from other. It returns the percentage of similitude
+	//! Compare how similar are two nucleotide sequences one from other. It returns the percentage of similitude between 0 to 1.
 	int compare(NucleoString nucleo1,NucleoString nucleo2);
 
 };

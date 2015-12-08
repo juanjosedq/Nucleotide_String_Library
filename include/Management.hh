@@ -38,38 +38,38 @@ class Management{
 		/*!
 		* Warning: You cannot create a management object, it doesn't exist.
 		*/
-		Management(void);
+		Management()
 		//! NucleoString param constructor.
 		/*!
 		* Generates a vector of sequence locations "TSeqLocVector". FASTA format is a text-based format
 		* for representing either nucleotide sequences or peptide sequences in which nucleotides or
 		* amino acids are represented using single-letter codes
 		*/	
-		CRef<IQueryFactory> FetchQuerySequence(NucleoString<ARN>);
+		FetchQuerySequence(NucleoString<>)
 		//! Null param constructor.
 		/*!
 		* Select the options of target sequences "Data bases"
 		* Warning: This function only is for BlastN data bases.
 		*/
-		CSearchDatabase FetchBlastNDataBases();
+		FetchNucleoNDataBases()
 		//! Null param constructor.
 		/*!
 		* Select the options of target sequences "Data bases"
 		* Warning: This function only is for MegaBlast data bases.
 		*/
-		CSearchDatabase FetchMegaBlastDataBases();
+		FetchNucleoMegaDataBases()
 		//! Null param constructor.
 		/*!
 		* Set the options to values appropriate to common tasks
 		* Warning: This function only is for BlastN data bases.
 		*/
-		CRef<CBlastOptionsHandle> FetchOptionsBlastN();
+		FetchOptionsBlastN()
 		//! Null param constructor.
 		/*!
 		* Set the options to values appropriate to common tasks
 		* Warning: This function only is for MegaBlast data bases.
 		*/
-		CRef<CBlastOptionsHandle> FetchOptionsMegaBlast();
+		FetchOptionsMegaBlast()
 
 		txt(string, NucleoString)
 		/*! 
@@ -79,5 +79,10 @@ class Management{
 		/*!
 		This function generates a string from a textfile. Warning: This function doesn't read the first line cause it might be the title
 		*/
+
+		/*! 
+		This function generetes an NucleoString from a text file.
+		*/
+		NucleoString load_nucleostr(string file);
 
 #endif // Management_H	

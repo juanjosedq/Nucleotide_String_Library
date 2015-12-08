@@ -1,4 +1,6 @@
 #include "NucleoString.h"
+#include <list>
+
 template<NTYPE ANN>
 NucleoString<ANN>::NucleoString(void){
     this->header = "";
@@ -70,13 +72,13 @@ NucleoString<ARN> NucleoString<ADN>::transcript(){
 	if(temp[i] == temp[temp[temp.find_first_of("Aa"))]{
 		temp[i] = 'U'
 	}
-	else-if(temp[i] == temp[temp[temp.find_first_of("Tt"))]{
+	if-else(temp[i] == temp[temp[temp.find_first_of("Tt"))]{
 		temp[i] = 'A';
 	}
-	else-if(temp[i] == temp[temp[temp.find_first_of("Cc"))]{
+	if-else(temp[i] == temp[temp[temp.find_first_of("Cc"))]{
 		temp[i] = 'G';
 	}
-	else-if(temp[i] == temp[temp[temp.find_first_of("Gg"))]{
+	if-else(temp[i] == temp[temp[temp.find_first_of("Gg"))]{
 		temp[i] = 'C';
 	}
 }
@@ -89,13 +91,13 @@ NucleoString<ADN> NucleoString<ARN>::transcript(){
 	if(temp[i] == temp[temp[temp.find_first_of("Aa"))]{
 		temp[i] = 'T'
 	}
-	else if(temp[i] == temp[temp[temp.find_first_of("Tt"))]{
+	if-else(temp[i] == temp[temp[temp.find_first_of("Tt"))]{
 		temp[i] = 'A';
 	}
-	else if(temp[i] == temp[temp[temp.find_first_of("Cc"))]{
+	if-else(temp[i] == temp[temp[temp.find_first_of("Cc"))]{
 		temp[i] = 'G';
 	}
-	else if(temp[i] == temp[temp[temp.find_first_of("Gg"))]{
+	if-else(temp[i] == temp[temp[temp.find_first_of("Gg"))]{
 		temp[i] = 'C';
 	}
 }
@@ -122,10 +124,56 @@ string NucleoString<ANN>::headerret(){
     return this->header;
 }
 
+
 template<NTYPE ANN>
-int NucleoString<ANN>::compare(String nucleo1, String nucleo2){
-	n1=nucleo1.size();
-	n2=nucleo2.size();
-	nucleo1find(nucleo2);
-			
+int NucleoString<ANN>:: compare(string nucleo1, string nucleo2{
+list<char> subconjunto;
+}
+
+
+template<NTYPE ANN>
+int NucleoString<ANN>::compare(string nucleo1, String nucleo2){
+	string subconjunto;
+	int n1= nucleo1.size()/2;
+	int n2= nucleo2.size()/2;
+	int i= 1;
+	subconjunto.append(nucleo2.substr(n1-2,n1+2));
+	while(nucleo1.find(subconjunto)<npos){
+	i++;
+		subconjunto.append(n1+i)
+		subconjunto.push_back(n1-i)	
+	}
+	int aciertos = subconjunto.size()
+	int totales  = nucleo1.size()
+	float porcentaje = aciertos/total 	
+
+	return porcentaje;
+}
+
+
+
+
+/*!
+	int n1=nucleo1.size();
+	int n2=nucleo2.size();
+
+	list<string> subconjunto (string[n2/2]);
+	list.push_front()
+
+*/
+
+
+
+
+
+	/*!if(n1<n2){
+	for(i=0;i<n3/2; i++){
+		nucleo1[n3]
+			}
+	}
+	else{
+	int n3=n1;
+	}
+	string nucleo3 = char[n3];
+*/
 }
