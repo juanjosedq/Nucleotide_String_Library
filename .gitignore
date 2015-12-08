@@ -23,6 +23,7 @@ $cat .gitignore
 *.lib
 *.sbr
 *.sdf
+*.pdf
 *.pyc
 *.xml
 ipch/
