@@ -1,4 +1,4 @@
-OBJ0= escrito_NucleoString.tex
+OBJ0= Nucleotide_String_Library.tex
 #OBJ1= referencias.bib
 
 CC0= pdflatex
