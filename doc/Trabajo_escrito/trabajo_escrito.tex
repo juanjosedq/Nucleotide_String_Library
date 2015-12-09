@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{etex}
+\usepackage{mathrsfs}
+\usepackage{listings}
+
+
+
+\begin{document}
+
+%\title{documento ejemplo}
+%\author{ Ariel Fallas, David Martinez, Juan José Gonzales}
+%
+%\maketitle
+
+%\section{Justificación}
+
+Los nucleótidos son la base de nuestros genes. Estos se unen de manera única y específica para crear cada uno de los genes. Estos son únicos y se componen unicamente de 4 tipos de nucleótidos (Adenina, Guanina, Citosina, Timina). 
+Una pequeña modificación en el código genético puede significarse una mutación, la cual podría terminar generando una especie completamente distinta a la originaria. 
+Y el ADN de un organismo se compone de millones de millones de genes y comparar dos de ellos podría tomarse semanas e inclusive meses si se hace manualmente. Es por esto que automatizar este proceso es necesario, ya que si queremos descubrir una nueva especie o averiguar con cual especie de bacteria estamos tratando por ejemplo, podemos tomar una muestra de esta y compararla con una base de datos ya existente y hacerlo en cuestión de minutos
+
+%\section{Objetivos General}
+
+%\begin{itemize}
+%\item Crear una librería capaz de trabajar en el procesamiento de cadenas de nucleótidos para facilitar %y agilizar el trabajo de los investigadores del centro de investigación en biología celular y molecular %\textbf{(CIBCM)}
+%\end{itemize}
+
+%\section{Objetivos Específicos}
+%\begin{itemize}
+%\item Crear una clase capaz  de procesar información sobre nucleótidos  
+%\item Crear una clase que se comunique con una base de datos en internet
+
+%\section{Desarrollo}
+%Para la realización de este proyecto se implementaron 3 clases fundamentales, las cuales tenian %distintos propósitos, cada una de ellas cumple un papel esencial en el desarrollo del proyecto y 
+
+
+\subsection{NucleoString}
+%	Esta clase tenía como objetivo hacer las operaciones con las cadenas de nucleótidos, tales como %insertar, comparar, cortar, entre otras. 
+	Con ello se pretende sistematizar y agilizar el proceso de busqueda de genes. La idea de esta clase es poder manejar cadenas de aminoácidos a nuestro gusto y de manera rápida.
+	
+\subsection{Management}
+	El objetivo de esta clase era lograr comunicarse con la base de datos de internet de blast, para ello fue necesario bajar algunas de las librerias de blast ya existentes e implementarle algunas funciones nuevas.Para ello se necesitó descargar la librerías de blast y entender su funcionamiento. Sin esta clase sería imposible que la librería fuese útil, pues no tendría una base de datos con que compararse. Estas librerías de blast fueron escogidas pensando en que es la mayor base de datos de genes del mundo, por lo que tendría un mayor alcance
+	
+\subsection{Helix}
+	Con esta clase se pretende relacionar cadenas de aminocácidos tal y como el ADN, el cual es una doble hélice. De esta forma se podría obtener una cadena y la complementaria de esta, pues ambas están enlazadas. 
+
+
+\section{Análisis de eficiencia}
+
+%\begin{center}
+%\begin{tabular}{|l|c|r|}
+%\hline
+%código & veces & operaciones\\
+%\hline
+%while(nucleo1.find(subconjunto)$<$npos)\{ & n*n & c*n*n \\
+%i++ & 1 & j*n/2 \\
+%subconjunto.append(nucleo2.substr(n1+i)) & n(n/2) & m*n*(n/2)\\
+%subconjunto.push\_back(nucleo2.substr(n1-i));& n*n/2 & k*n*(n/2)\\
+%}\\
+%int aciertos = subconjunto.size(); & c & 1 \\
+%int totales  = nucleo1.size(); & 1 & \\
+%float porcentaje = aciertos/totales;  & 1 & 1 \\
+%return & const & 1\\
+%\hline
+%\end{tabular}
+%\end{center}
+
+Resultado para el mejor caso se obtiene: \\
+
+\begin{equation}
+\label{eq:best}
+c*n
+\end{equation}
+
+
+%Resultado para el peor caso se tiene:\\
+
+%\begin{equation}
+%\label{eq:worst}
+%jn + \frac{m+k+2c}{2}*n^2
+%\end{equation}
+
+%Desarrollando la expresion anteriores y se obtiene la ecuación de T(n)
+
+%\begin{equation}
+%\label{eq:T(n)}
+%T(n)=\frac{a}{2}n^2 + dn 
+%\end{equation}
+
+
+%\end{itemize}
+
+
+\section{Diagrama de Flujo}
+\begin{figure}[h]
+\centering
+ \includegraphics[width=3.0 in]{flujo.dia}
+ \caption{Diagrama de flujo para compare}
+ \label{flujo}
+ 
+\end{figure}
+
+\end{document}
