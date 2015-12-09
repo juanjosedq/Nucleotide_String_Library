@@ -1,0 +1,22 @@
+Nucleotide String Library		decembre 2015   
+							
+		GENERAL USAGES NOTES			
+--------------------------------------------------------
+							
+This repository called "Nucleotide String Library" has a
+series of classes for working and manipulating strings  
+of nitrogenous bases.
+
+The repository is organized by three folders which are
+explained below:
+
+-doc:This folder contains the written project work,
+     presentations of progress and important data for the
+     development of work.
+
+-include: This folder contains the files .hh and .h 
+	  necessary to compile the program.
+
+-src: This folder contains the implementation of all the
+      classes and also have the main.cpp file which is the
+      final application.					
