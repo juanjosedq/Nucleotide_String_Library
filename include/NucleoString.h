@@ -107,7 +107,7 @@ class NucleoString{
         NucleoString<ANN> operator+(NucleoString<ANN>);
 
 	//! Compare how similar are two nucleotide sequences one from other. It returns the percentage of similitude between 0 to 1.
-	int compare(NucleoString, NucleoString);
+	float compare(NucleoString, NucleoString);
 
 };
 

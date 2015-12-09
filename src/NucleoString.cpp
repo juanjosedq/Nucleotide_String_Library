@@ -132,7 +132,7 @@ list<char> subconjunto;
 
 
 template<NTYPE ANN>
-int NucleoString<ANN>::compare(string nucleo1, String nucleo2){
+float NucleoString<ANN>::compare(string nucleo1, String nucleo2){
 	string subconjunto;
 	int n1= nucleo1.size()/2;
 	int n2= nucleo2.size()/2;
@@ -140,12 +140,12 @@ int NucleoString<ANN>::compare(string nucleo1, String nucleo2){
 	subconjunto.append(nucleo2.substr(n1-2,n1+2));
 	while(nucleo1.find(subconjunto)<npos){
 	i++;
-		subconjunto.append(n1+i)
-		subconjunto.push_back(n1-i)	
+		subconjunto.append(substr(n1+i));
+		subconjunto.push_back(n1-i);	
 	}
-	int aciertos = subconjunto.size()
-	int totales  = nucleo1.size()
-	float porcentaje = aciertos/total 	
+	int aciertos = subconjunto.size();
+	int totales  = nucleo1.size();
+	float porcentaje = aciertos/totales; 	
 
 	return porcentaje;
 }
